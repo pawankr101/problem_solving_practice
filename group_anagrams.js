@@ -1,15 +1,15 @@
 /**
- * @param {string[]} strs
+ * @param {string[]} str
  * @return {string[][]}
  */
-var groupAnagrams = function(strs) {
+var groupAnagrams = function(str) {
     /**
      * @type {string[][]}
      */
     let result = [];
 
-    for(let i=0, l=strs.length;i<l;i++) {
-        fillInResults(strs[i], result);
+    for(let i=0, l=str.length;i<l;i++) {
+        fillInResults(str[i], result);
     }
     for(let i=0, l=result.length;i<l;i++) {
         result[i].length = result[i].length - 1;

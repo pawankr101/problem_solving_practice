@@ -11,7 +11,7 @@ const PrimeNumbers = (function() {
  * @class HashTable
  * @typedef {number|string|Symbol} Key number | string | Symbol
  * @typedef {*} Value
- * @typedef {{key:Key, value:Value}} Entry
+ * @typedef {{key: Key, value: Value}} Entry
  */
 const HashTable =  (function() {
 
@@ -52,7 +52,6 @@ const HashTable =  (function() {
 
     /**
      * @static
-     * @method
      * @param {Key} key
      * @param {Value} value
      * @returns {HashTable}
@@ -80,5 +79,3 @@ const HashTable =  (function() {
     }
     return HashTable;
 })();
-
-new HashTable()
