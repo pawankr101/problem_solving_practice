@@ -2,18 +2,19 @@
 console.log("Hi Guys");
 
 /**
- * @type {function(): void}
- */
-let newFunc;
-
-/**
 * @param {string} str
 * @param {function(string): void} cb
 */
 function fun(str, cb) {
 	console.log("inside fun");
-	cb(str);
+	queueMicrotask(()=> {
+        cb(str);
+    });
 	console.log("After CB");
+}
+function newFunc(st, s) {
+    console.log("newFunc: " + st);
+    console.log("newFunc: " + s);
 }
 
 fun("value", function(s) {
@@ -21,15 +22,12 @@ fun("value", function(s) {
 	fun("innerValue", function(st) {
         console.log(st);
         console.log(s);
-        newFunc = function() {
-            console.log(st);
-            console.log(s);
-        }
+        newFunc(st, s);
     });
 	console.log("done");
 });
 
-newFunc();
+// newFunc();
 
 console.log("End");
 

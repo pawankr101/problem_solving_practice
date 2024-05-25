@@ -63,8 +63,8 @@ var Sudoku = (function Sudoku() {
                 }
             }
         } else if(index.box!==undefined) {
-            let d = Math.floor(index.box / 3), r = index.box % 3;
-            let is = r*3, ie = ((r+1)*3), js=d*3, je = ((d+1)*3);
+            const d = Math.floor(index.box / 3), r = index.box % 3;
+            const is = r*3, ie = ((r+1)*3), js=d*3, je = ((d+1)*3);
             for(let i=is,j;i<ie;i++) {
                 for(j=js;j<je;j++) {
                     if(brd[i][j]!='.') {

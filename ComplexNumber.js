@@ -1,7 +1,5 @@
 
-/**
- * @class ComplexNumber
- */
+/** @class `ComplexNumber` */
 const ComplexNumber = (function () {
 
     /**
@@ -43,3 +41,8 @@ const ComplexNumber = (function () {
 
     return ComplexNumber;
 })();
+
+
+let cn1 = new ComplexNumber(1, 2), cn2 = new ComplexNumber(2, 3);
+
+let cn = cn1.add(cn2).abs();
